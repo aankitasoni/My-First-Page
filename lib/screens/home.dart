@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' as launcher;
 
@@ -103,7 +102,7 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             margin:
-                            const EdgeInsets.only(left: 10.0, right: 15.0),
+                                const EdgeInsets.only(left: 10.0, right: 15.0),
                             child: const Divider(
                               color: Colors.blueGrey,
                               thickness: 1,
@@ -122,7 +121,7 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: Container(
                             margin:
-                            const EdgeInsets.only(left: 10.0, right: 15.0),
+                                const EdgeInsets.only(left: 10.0, right: 15.0),
                             child: const Divider(
                               color: Colors.blueGrey,
                               thickness: 1,
@@ -145,14 +144,13 @@ class HomePage extends StatelessWidget {
                           width: 35,
                           child: GestureDetector(
                             onTap: () async {
-                              Uri ur = Uri.parse(
-                                  'mailto:ankitasoni018@gmail.com');
-                              if (!await launcher.launchUrl(ur)){
+                              Uri ur =
+                                  Uri.parse('mailto:ankitasoni018@gmail.com');
+                              if (!await launcher.launchUrl(ur)) {
                                 debugPrint('could not send mail');
                               }
                             },
                             child: const Image(
-
                               image: AssetImage(
                                 'image/gmail.png',
                               ),
@@ -175,7 +173,7 @@ class HomePage extends StatelessWidget {
                                   Uri.parse(
                                       'https://www.linkedin.com/in/ankita-soni-17430a221/'),
                                   mode:
-                                  launcher.LaunchMode.externalApplication);
+                                      launcher.LaunchMode.externalApplication);
                             },
                             child: const Image(
                               image: AssetImage(
